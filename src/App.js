@@ -2,6 +2,7 @@ import './App.css';
 import {reactSyllabus} from './data.js';
 import {useState} from 'react';
 
+// note: removing section for now to make it easy
 function App() {
   
   var [syllabus, setSyllabus] = useState(reactSyllabus);
@@ -9,6 +10,8 @@ function App() {
     console.log("inside mark complete h:", heading, ",topic:", topic);
     var si = syllabus.findIndex(s => s.heading == heading);
     var section = syllabus[si];
+
+
 
     console.log("section:", section);
     section.topicList.map(t => {
